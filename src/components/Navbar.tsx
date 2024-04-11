@@ -9,7 +9,7 @@ interface NavProps {
     translateY?: number
 }
 
-const Navbar: React.FC<NavProps> = ({ translateY = 0 }) => {
+const Navbar: React.FC<NavProps> = ({}) => {
     // const currentRoute = useLocation()
     const logoRef = useRef<HTMLHeadingElement>(null)
     // const [windowSize, breakpoint] = useWindowSize()

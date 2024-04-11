@@ -142,7 +142,7 @@ const Home: React.FC = ({ }) => {
                                         {/* blackjack, poker, and roulette. */}
                                     </p>
                                     <ScrollingText words={['Blackjack', 'Poker', 'Roulette']}
-                                        speed={200}
+                                        // speed={200}
                                         fontStyle={{
                                             fontSize: '1.5rem',
                                             textDecoration: 'underline'

@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
+// import App from './App.tsx'
 import './index.css'
 import {
   createBrowserRouter,
@@ -12,6 +12,7 @@ import About from './pages/About.tsx';
 import Gallery from './pages/Gallery.tsx';
 import Sponsors from './pages/Sponsors.tsx';
 import Footer from './components/Footer.tsx';
+// import Merch from './pages/Merch.tsx';
 
 
 const router = createBrowserRouter([
@@ -34,7 +35,11 @@ const router = createBrowserRouter([
   {
     path: '/sponsors',
     element: <Sponsors />
-  }
+  },
+  // {
+  //   path: '/merch',
+  //   element: <Merch />
+  // }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

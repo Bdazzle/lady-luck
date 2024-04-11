@@ -1,4 +1,4 @@
-const routeList: string[] = ['/home', '/about', '/contact', '/gallery', '/sponsors'];
+const routeList: string[] = ['/home', '/about', '/contact', '/gallery', '/sponsors', '/merch'];
 
 const goldText: string = `bg-right bg-clip-text bg-gold-gradient text-transparent`;
 

@@ -1,9 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import FlipCard from "./FlipCard";
-import { goldStyle, goldText, routeList, underlineAnimation } from "../constants";
+import { goldText, routeList, underlineAnimation } from "../constants";
 import cardFaces from "../SVGs/cardFaces"
-import useWindowSize from "../hooks/useWindowSize";
-import { useEffect, useState } from "react";
 
 const cards = ['ace', 'king', 'queen', 'jack']
 

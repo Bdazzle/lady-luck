@@ -1,4 +1,4 @@
-import { ReactElement, ReactNode } from "react"
+import { ReactNode } from "react"
 
 const cardFaces: { [key: string]: ReactNode } = {
     ace: <svg id="ace" xmlnsXlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="43" height="60" className="card" preserveAspectRatio="none" viewBox="-120 -168 240 336">

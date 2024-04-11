@@ -2,12 +2,12 @@ import React, { CSSProperties } from "react";
 
 interface ScrollingTextProps {
     words: string[],
-    speed: number,
+    // speed: number,
     fontStyle: CSSProperties
     containerSize? : string
 }
 
-const ScrollingText: React.FC<ScrollingTextProps> = ({ words, speed, fontStyle , containerSize = '24px' }) => {
+const ScrollingText: React.FC<ScrollingTextProps> = ({ words, fontStyle , containerSize = '24px' }) => {
 
     return (
         <div className={`overflow-hidden`}

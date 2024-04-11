@@ -10,19 +10,19 @@ interface CardProps {
 
 const FlipCard: React.FC<CardProps> = ({ front, back, width, height, timing }) => {
     const [time, setTime] = useState<number>(500)
-    const [windowSize, setWindowSize] = useState<number>(window.innerWidth)
+    // const [windowSize, setWindowSize] = useState<number>(window.innerWidth)
 
     useEffect(() =>{
         if(timing && window.innerWidth <= 768){
             setTime(timing)
         }
-        const resize = () =>{
-            setWindowSize(window.innerWidth)
-        }
-        window.addEventListener("resize", resize);
-        return () =>{
-            window.removeEventListener("resize",resize)
-        }
+        // const resize = () =>{
+        //     setWindowSize(window.innerWidth)
+        // }
+        // window.addEventListener("resize", resize);
+        // return () =>{
+        //     window.removeEventListener("resize",resize)
+        // }
     },[])
 
 // console.log(windowSize)
