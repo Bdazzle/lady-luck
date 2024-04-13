@@ -36,7 +36,7 @@ const About: React.FC = ({ }) => {
                     May Lady Luck smile on all of us!
                     {/* ☀️ */}
                 </div>
-                <div id="sun_container" className="flex justify-center">
+                <div id="sun_container" className="flex justify-center h-[250px] min-w-52">
                     <Sun />
                 </div>
             </div >
