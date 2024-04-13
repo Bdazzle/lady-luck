@@ -3,7 +3,7 @@ import FlipCard from "./FlipCard";
 import { goldText, routeList, underlineAnimation } from "../constants";
 import cardFaces from "../SVGs/cardFaces"
 
-const cards = ['ace', 'king', 'queen', 'jack']
+const cards = ['ace', 'king', 'queen', 'jack', 'aceOfHearts']
 
 const NavLinks: React.FC = ({ }) => {
     const currentRoute = useLocation()
@@ -12,7 +12,7 @@ const NavLinks: React.FC = ({ }) => {
         <div id="linksContainer"
             className="flex lg:flex-row lg:justify-around lg:w-full lg:h-24 lg:items-end lg:static lg:py-0 
            
-                    flex-col absolute ml-0 w-1/3 bg-darkPurple py-2 lg:bg-black rounded animate-leftSlide"
+                    flex-col absolute ml-0 w-1/3 bg-darkPurple py-2 lg:bg-black rounded animate-leftSlide lg:animate-none"
         >
             {
                 routeList.filter(r => {

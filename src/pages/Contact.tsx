@@ -7,7 +7,7 @@ const Contact: React.FC = ({ }) => {
     return (
         <div>
             <Navbar />
-            <h1 className={`${goldText} text-center text-4xl my-4`}>
+            <h1 className={`${goldText} text-center text-4xl my-4 lg:mt-24`}>
                 Contact
             </h1>
             <div className="text-white flex flex-col"
