@@ -1,8 +1,8 @@
 {
   "name": "lady-luck",
+  "homepage": "https://Bdazzle.github.io/lady-luck",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://Bdazzle.github.io/lady-luck",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",

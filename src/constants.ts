@@ -7,3 +7,4 @@ const goldStyle : string = `bg-right bg-clip-content bg-gold-gradient text-trans
 const underlineAnimation: string = 'w-full h-[1px] bottom-0 left-0 bg-[#BF953F] origin-bottom-left scale-x-0 duration-250 ease-out transition-all group-hover:transition-all group-hover:scale-x-100'
 
 export { goldText, goldStyle, routeList, underlineAnimation };
+// "homepage": "https://Bdazzle.github.io/lady-luck",

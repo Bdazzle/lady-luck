@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import {
   createBrowserRouter,
+  // createHashRouter,
   RouterProvider,
 } from "react-router-dom";
 import Home from './pages/Home.tsx';
@@ -12,7 +13,7 @@ import About from './pages/About.tsx';
 import Gallery from './pages/Gallery.tsx';
 import Sponsors from './pages/Sponsors.tsx';
 import Footer from './components/Footer.tsx';
-// import Merch from './pages/Merch.tsx';
+import Merch from './pages/Merch.tsx';
 
 
 const router = createBrowserRouter([
@@ -36,11 +37,13 @@ const router = createBrowserRouter([
     path: '/sponsors',
     element: <Sponsors />
   },
-  // {
-  //   path: '/merch',
-  //   element: <Merch />
-  // }
-])
+  {
+    path: '/merch',
+    element: <Merch />
+  }
+], {
+  basename: import.meta.env.DEV ? '/' : '/lady-luck/'
+})
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
