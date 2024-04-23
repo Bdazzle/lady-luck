@@ -48,7 +48,12 @@ export default {
         'compress' : 'compress 500ms ease-in-out forwards',
         'flip' : 'flip ease-in-out forwards',
         'spin' : 'spin 6s linear infinite',
-        'reverseSpin' : 'reverseSpin 6s linear infinite'
+        'reverseSpin' : 'reverseSpin 6s linear infinite',
+        'deal1' : 'deal1 100ms ease-in-out forwards',
+        'deal2' : 'deal2 200ms ease-in-out forwards',
+        'dealMid' : 'dealMid 300ms ease-in-out forwards',
+        'deal4' : 'deal4 400ms ease-in-out forwards',
+        'deal5' : 'deal5 500ms ease-in-out forwards',
       },
       keyframes: {
         /*
@@ -96,6 +101,28 @@ export default {
         reverseSpin : {
           '0%' : { transform: 'rotate(360deg)' },
           '100%' : { transform: 'rotate(0deg)' }
+        },
+        deal1 : {
+          '0%': { transform : 'translate3d(0,0)' },
+          '100%' : { 
+            transform : 'translate3d(-200%,-50%,0) rotate(-45deg)',
+          }
+        },
+        deal2 : {
+          '0%': { transform : 'translate3d(0,0)' },
+          '100%' : { transform : 'translate3d(-100%,-100%,0) rotate(-23deg)'}
+        },
+        dealMid : {
+          '0%': { transform : 'translateY(0)' },
+          '100%' : { transform : 'translateY(-130%)'}
+        },
+        deal4 : {
+          '0%': { transform : 'translate3d(0,0)' },
+          '100%' : { transform : 'translate3d(100%,-100%,0) rotate(23deg)'}
+        },
+        deal5 : {
+          '0%': { transform : 'translate3d(0,0)' },
+          '100%' : { transform : 'translate3d(200%,-50%,0) rotate(45deg)'}
         }
       },
     },

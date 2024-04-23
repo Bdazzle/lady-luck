@@ -17,7 +17,6 @@ const Home: React.FC = ({ }) => {
 
     const handleScroll = () => {
         const scrollTop = window.scrollY;
-        // const logoTop = logoRef.current?.getBoundingClientRect().top;
         const logoHeight = logoRef.current?.offsetHeight as number;
         const ydiff = scrollTop - logoHeight
 
@@ -30,15 +29,12 @@ const Home: React.FC = ({ }) => {
         /* makes sure that logo has transitioned completely to 0 if scrolled lower than logo height */
         if (scrollTop > logoHeight) {
             setYtranslate(0)
-            // setLogoVis(false)
         }
     }
 
     const resetLogoOnResize = () => {
         if (window.screenY === 0) {
-            // setYtranslate(logoRef.current?.offsetHeight as number)
             setYtranslate(80)
-            // setLogoVis(true)
         }
     }
 
@@ -62,7 +58,6 @@ const Home: React.FC = ({ }) => {
     const midObserver = new IntersectionObserver((entries) => {
         const entry = entries[0]
         setMidVis(entry.isIntersecting)
-        // console.log(entry, entry.isIntersecting)
     },
         { threshold: 0.25 } //% of element visible before triggering
     )
@@ -119,11 +114,9 @@ const Home: React.FC = ({ }) => {
                     </div>
                     <div id="mid_observer_container"
                         ref={midRef}
-                        //  lg:hover:bg-primaryPurple lg:bg-darkPurple lg:rounded
                         className="group flex flex-col lg:flex-row-reverse items-center py-4 ">
                         <div className=" lg:rounded lg:flex lg:flex-row-reverse md:group-hover:bg-primaryPurple md:bg-midpurple rounded">
                             <div
-                            // hover:bg-primaryPurple bg-darkPurple rounded lg:bg-none lg:hover:bg-none
                                 className={`${midVis ? `animate-expand` : 'animate-compress'} hover:bg-primaryPurple group-hover:bg-primaryPurple bg-midpurple md:bg-none rounded lg:min-w-[711px] p-4 my-10 flex flex-col lg:flex-row items-center`}>
                                 <PerspectiveImage src={roulette} alt={"a roulette wheel"} scaleFactor={2}
                                     wrapperClass="max-w-[466px]"
@@ -139,7 +132,6 @@ const Home: React.FC = ({ }) => {
                                 <div className="flex flex-row justify-center text-2xl min-w-[205px] lg:mx-4">
                                     <p className="underline text-center">
                                         We offer :&nbsp;
-                                        {/* blackjack, poker, and roulette. */}
                                     </p>
                                     <ScrollingText words={['Blackjack', 'Poker', 'Roulette']}
                                         // speed={200}

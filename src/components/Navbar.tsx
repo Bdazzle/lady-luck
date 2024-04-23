@@ -3,13 +3,13 @@ import { goldStyle, goldText } from "../constants"
 import logo from "../assets/logo-inverted-mid.png"
 import { FacebookIcon, FacebookShareButton, TwitterShareButton, XIcon } from "react-share"
 import TWBurgerButton from "./TWBurgerButton"
-import NavLinks from "./NavLinks"
+import { NavLinks, MobileNavLinks } from "./NavLinks"
 
 interface NavProps {
     translateY?: number
 }
 
-const Navbar: React.FC<NavProps> = ({}) => {
+const Navbar: React.FC<NavProps> = ({ }) => {
     // const currentRoute = useLocation()
     const logoRef = useRef<HTMLHeadingElement>(null)
     // const [windowSize, breakpoint] = useWindowSize()
@@ -29,16 +29,16 @@ const Navbar: React.FC<NavProps> = ({}) => {
         }
     }, [])
 
+    console.log(windowSize)
+
     return (
         <div itemScope itemType="http://schema.org/LocalBusiness"
         >
             <nav id="nav" role="navigation" aria-label="Primary"
-                className="fixed md:h-24 w-full flex flex-col lg:justify-center lg:items-center lg:flex-row mt-0 bg-black overflow-hidden z-10"
+                className="fixed lg:h-24 w-full flex flex-col lg:justify-center lg:items-center lg:flex-row mt-0 bg-black z-10"
             >
                 <div id="logocontainer"
-                    // ${breakpoint === 'sm' || breakpoint === 'md' ? 'w-[50%]' : window.scrollY === 0 ? 'w-0' : 'w-[50%]'}
-                    // h-12
-                    className={`flex flex-row  lg:h-20 w-full justify-evenly`}
+                    className={`flex flex-row lg:h-20 w-full lg:w-1/2 justify-evenly`}
                 >
                     <img src={logo}
                         className="h-12"
@@ -46,14 +46,6 @@ const Navbar: React.FC<NavProps> = ({}) => {
                     />
                     <h1 ref={logoRef} itemProp="name"
                         id="navlogo"
-                        // style={
-                        //     windowSize >= 640 ?
-                        //         {
-                        //             transform: `translateY(${0 - translateY}px)`,
-                        //         }
-                        //         :
-                        //         {}
-                        // }
                         className={`${goldText} font-cursive text-4xl text-center lg:text-6xl w-[50%]`} >
                         Lady Luck
                     </h1>
@@ -91,16 +83,13 @@ const Navbar: React.FC<NavProps> = ({}) => {
                         </a>
                     </div>
                 </div>
-
-                {
-                    windowSize > 768 && <NavLinks />
-                }
-
-            </nav>
-            {
-                windowSize <= 768 &&
+                <div id="desktop_nav"
+                    className={'invisible lg:visible h-0 lg:h-24 w-1/2'}
+                >
+                    <NavLinks />
+                </div>
                 <div id="mobilenav"
-                    className="pt-[14%] md:pt-[13%]">
+                    className="lg:invisible">
                     <TWBurgerButton
                         barstyle={`w-8 h-1 md:w-18 mb-1 rounded-lg ${goldStyle}`}
                         containerstyle='h-6 w-8 md:w-18 top-[7vh] mr-[5%] right-0 '
@@ -108,10 +97,11 @@ const Navbar: React.FC<NavProps> = ({}) => {
                         defaultClickState={isClicked}
                     />
                     {
-                        isClicked && <NavLinks />
+                        isClicked && <MobileNavLinks />
                     }
                 </div>
-            }
+            </nav>
+
         </div>
     )
 }

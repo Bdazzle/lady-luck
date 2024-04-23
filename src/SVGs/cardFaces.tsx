@@ -1,7 +1,9 @@
 import { ReactNode } from "react"
 
-const cardFaces: { [key: string]: ReactNode } = {
-    ace: <svg id="ace" xmlnsXlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="43" height="60" className="card" preserveAspectRatio="none" viewBox="-120 -168 240 336">
+
+const cardFaces = (id: string): { [key: string]: ReactNode }  => {
+   return {
+   ace: <svg id="ace" xmlnsXlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" className="card" preserveAspectRatio="none" viewBox="-120 -168 240 336">
         <defs>
             <symbol id="ace_b" preserveAspectRatio="xMinYMid" viewBox="-500 -500 1000 1000">
                 <path fill="none" stroke="#000" strokeLinecap="square" strokeMiterlimit="1.5" strokeWidth="80" d="M-270 460h160m-90-10L0-460l200 910m-90 10h160m-390-330h240" />
@@ -22,7 +24,7 @@ const cardFaces: { [key: string]: ReactNode } = {
         </g>
     </svg>,
 
-    king: <svg id="king" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="43" height="60" className="card" preserveAspectRatio="none" viewBox="-120 -168 240 336">
+    king: <svg id="king" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="100%" height="100%" className="card" preserveAspectRatio="none" viewBox="-120 -168 240 336">
         <defs>
             <symbol xmlns="http://www.w3.org/2000/svg" id="king_h" preserveAspectRatio="xMinYMid" viewBox="-500 -500 1000 1000">
                 <path fill="none" stroke="red" strokeLinecap="square" strokeMiterlimit="1.5" strokeWidth="80" d="M-285-460h200m-100 0v920m-100 0h200M85-460h200m-100 20-355 595M85 460h200m-100-20L-10-70" />
@@ -109,7 +111,7 @@ const cardFaces: { [key: string]: ReactNode } = {
         <use xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="#king_i" fill="none" stroke="#44F" />
     </svg>,
 
-    queen: <svg id="queen" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="43" height="60" className="card" preserveAspectRatio="none" viewBox="-120 -168 240 336">
+    queen: <svg id="queen" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="100%" height="100%" className="card" preserveAspectRatio="none" viewBox="-120 -168 240 336">
         <defs>
             <symbol id="queen_h" preserveAspectRatio="xMinYMid" viewBox="-500 -500 1000 1000">
                 <path fill="none" stroke="red" strokeLinecap="square" strokeMiterlimit="1.5" strokeWidth="80" d="M-260 100c300 0 220 360 520 360M-175 0v-285a175 175 0 0 1 350 0v570a175 175 0 0 1-350 0Z" />
@@ -197,7 +199,7 @@ const cardFaces: { [key: string]: ReactNode } = {
         <use xlinkHref="#queen_i" fill="none" stroke="#44F" />
     </svg>,
 
-    jack: <svg id="jack" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="43" height="60" className="card" preserveAspectRatio="none" viewBox="-120 -168 240 336">
+    jack: <svg id="jack" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="100%" height="100%" className="card" preserveAspectRatio="none" viewBox="-120 -168 240 336">
         <defs>
             <symbol id="jack_h" preserveAspectRatio="xMinYMid" viewBox="-500 -500 1000 1000">
                 <path fill="none" stroke="#000" strokeLinecap="square" strokeMiterlimit="1.5" strokeWidth="80" d="M50-460h200m-100 0v710a100 100 0 0 1-400 0v-30" />
@@ -292,7 +294,7 @@ const cardFaces: { [key: string]: ReactNode } = {
     </svg>,
 
     aceOfHearts: <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" 
-    className="card" height="60" width="43" 
+    className="card" width="100%" height="100%" 
     preserveAspectRatio="none" viewBox="-120 -168 240 336" >
         <defs>
             <symbol id="VHA" viewBox="-500 -500 1000 1000" preserveAspectRatio="xMinYMid">
@@ -315,15 +317,16 @@ const cardFaces: { [key: string]: ReactNode } = {
         </g>
     </svg>,
 
-    cardback: <svg xmlns="http://www.w3.org/2000/svg" className="card" width="43" height="60" preserveAspectRatio="none" viewBox="-120 -168 240 336" >
+    cardback: <svg xmlns="http://www.w3.org/2000/svg" className="card" width="100%" height="100%" preserveAspectRatio="none" viewBox="-120 -168 240 336" >
         <defs>
-            <pattern id="B2" width="6" height="6" patternUnits="userSpaceOnUse">
+            <pattern id={`B2${id}`} width="6" height="6" patternUnits="userSpaceOnUse">
                 <path d="M3 0L6 3L3 6L0 3Z" fill="red" />
             </pattern>
         </defs>
         <rect width="239" height="335" x="-119.5" y="-167.5" rx="12" ry="12" fill="white" stroke="black" />
-        <rect fill="url(#B2)" width="216" height="312" x="-108" y="-156" rx="12" ry="12" />
+        <rect fill={`url(#B2${id})`} width="216" height="312" x="-108" y="-156" rx="12" ry="12" />
     </svg>
+   }
 }
 
 export default cardFaces

@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
 
     return (
         <div itemScope itemType="http://schema.org/ContactPoint"
-            className="flex flex-col lg:flex-row static  justify-evenly w-full pb-2 z-10 bg-black">
+            className="flex flex-col lg:flex-row static justify-evenly w-full pb-2 z-10 bg-black">
             <div itemProp="name"
                 className={`${goldText} font-cursive text-4xl text-center h-12 w-full lg:text-6xl lg:h-20 lg:w-[250px]`} >
                 Lady Luck
