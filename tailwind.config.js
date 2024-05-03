@@ -91,8 +91,8 @@ export default {
           '100%' : { clipPath : 'polygon(50% 100%,50% 0,50% 0,50% 100%)', },
         },
         flip : {
-          '0%' : { transform : 'rotateY(0)' },
-          '100%' : {transform : 'rotateY(180deg)'}
+          '0%' : { transform : 'rotateY(0)', opacity:'0' },
+          '100%' : { transform : 'rotateY(180deg)', opacity:'1'}
         },
         spin : {
           '0%' : { transform: 'rotate(0deg)' },

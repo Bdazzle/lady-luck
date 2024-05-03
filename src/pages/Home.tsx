@@ -2,9 +2,11 @@ import React, { useEffect, useRef, useState } from "react"
 import Navbar from "../components/Navbar"
 import blackjack from '../assets/blackjack.jpg'
 import roulette from '../assets/roulette.jpg'
-import PerspectiveImage from "../components/PerspectiveImage"
-import logo from "../assets/logo-inverted-mid.png"
-import ScrollingText from "../components/ScrollingText"
+import logo from "../assets/logo-only.png"
+import emailLogo from "../assets/logo-email.png"
+import phoneLogo from "../assets/logo-phone.png"
+import C2Cbutton from "../components/C2Cbutton"
+
 
 
 const Home: React.FC = ({ }) => {
@@ -81,33 +83,53 @@ const Home: React.FC = ({ }) => {
             <Navbar
                 translateY={Ytranslate}
             />
-            <div className="md:mt-24 ">
+            <div className="mt-24">
                 <div id="content"
-                    className="text-white px-8 lg:mt-0 flex flex-col items-center"
+                    className="text-white px-4 lg:mt-0 flex flex-col items-center "
                 >
-                    <img src={logo}
-                        className="max-w-[466px]"
-                    />
-                    <p className="text-2xl"
-
-                    >Welcome to lady luck - Martha’s Vineyard casino company.
+                    <div id="title_wrapper" className="border border-[#BF953F] mb-4 md:mt-2 w-3/4 md:w-1/3 h-14 flex justify-center items-center">
+                        <p className="text-center text-4xl font-semibold">
+                            Welcome To...
+                        </p>
+                    </div>
+                    <div id="home_logo_container"
+                        className="flex flex-col justify-center items-center w-full">
+                        <img src={logo}
+                            className="md:max-w-[466px]"
+                        />
+                        <a className="md:max-w-[466px] border-b border-blue-600"
+                            href="mailto:soikkeli@vineyard.net?Subject=" target="_blank" rel="noreferrer" itemProp="email">
+                            <img className="py-2" src={emailLogo}></img>
+                        </a>
+                        <a className="md:max-w-[466px] border-b border-blue-600"
+                            href="tel:5085605649" itemProp="telephone">
+                            <img className="py-2" src={phoneLogo}></img>
+                        </a>
+                    </div>
+                    <p className="text-3xl pt-4 px-8 text-center font-semibold">
+                        An authentic casino night experience your party guests will never forget!
+                    </p>
+                    <p className="text-2xl pt-4 px-8 text-center">
                         We are here to bring a fun and exciting casino night experience to your party, get together, wedding, or shindig.
                     </p>
                     <div id="top_observer_container"
                         ref={topRef}
                     >
                         <div
-                            className={`${topVis ? `animate-expand` : 'animate-compress'}  p-4 my-10 hover:bg-primaryPurple flex flex-col lg:flex-row items-center bg-midpurple rounded `}>
-                            <PerspectiveImage src={blackjack} alt={"a hand of blackjack"} scaleFactor={1}
-                                wrapperClass="max-w-[466px]"
-                                containerStyle={{
-                                    boxShadow: '3px 3px 3px rgba(0,0,0,0.4), -3px -3px 3px rgba(0,0,0,0.4)'
-                                }}
-                                imageStyle={{
+                            className={`${topVis ? `animate-expand` : 'animate-compress'}  p-4 mt-10 hover:bg-primaryPurple flex flex-col lg:flex-row items-center bg-midpurple rounded `}>
+                            <div className="md:max-w-[466px]"
+                                style={{
+                                    overflow: 'hidden',
                                     boxShadow: '2px 2px 2px rgba(0,0,0,0.4), -2px -2px 2px rgba(0,0,0,0.4)'
-                                }}
-                            />
-                            <p className="text-2xl lg:px-4 py-2">
+                                }}>
+                                <img src={blackjack} alt="a hand of blackjack"
+                                    className=""
+                                    style={{
+                                        boxShadow: '2px 2px 2px rgba(0,0,0,0.4), -2px -2px 2px rgba(0,0,0,0.4)'
+                                    }}
+                                ></img>
+                            </div>
+                            <p className="text-2xl px-8 py-2 text-center">
                                 We offer multiple table games, professional dealers, and prize packages* valued at over $300 for two of your lucky guests.
                             </p>
                         </div>
@@ -115,10 +137,10 @@ const Home: React.FC = ({ }) => {
                     <div id="mid_observer_container"
                         ref={midRef}
                         className="group flex flex-col lg:flex-row-reverse items-center py-4 ">
-                        <div className=" lg:rounded lg:flex lg:flex-row-reverse md:group-hover:bg-primaryPurple md:bg-midpurple rounded">
+                        <div className=" lg:rounded lg:flex lg:flex-row-reverse md:group-hover:bg-primaryPurple md:bg-midpurple rounded md:pt-10 pt-5">
                             <div
-                                className={`${midVis ? `animate-expand` : 'animate-compress'} hover:bg-primaryPurple group-hover:bg-primaryPurple bg-midpurple md:bg-none rounded lg:min-w-[711px] p-4 my-10 flex flex-col lg:flex-row items-center`}>
-                                <PerspectiveImage src={roulette} alt={"a roulette wheel"} scaleFactor={2}
+                                className={`${midVis ? `animate-expand` : 'animate-compress'} hover:bg-primaryPurple group-hover:bg-primaryPurple bg-midpurple md:bg-none rounded lg:min-w-[711px] p-4 flex flex-col lg:flex-row items-center`}>
+                                {/* <PerspectiveImage src={roulette} alt={"a roulette wheel"} scaleFactor={2}
                                     wrapperClass="max-w-[466px]"
                                     imageClass={"md:max-w-xl"}
                                     containerClass={"md:w-full"}
@@ -128,32 +150,41 @@ const Home: React.FC = ({ }) => {
                                     imageStyle={{
                                         boxShadow: '2px 2px 2px rgba(0,0,0,0.4), -2px -2px 2px rgba(0,0,0,0.4)'
                                     }}
-                                />
-                                <div className="flex flex-row justify-center text-2xl min-w-[205px] lg:mx-4">
+                                /> */}
+                                <div className="md:max-w-[500px]"
+                                    style={{
+                                        overflow: 'hidden',
+                                        boxShadow: '2px 2px 2px rgba(0,0,0,0.4), -2px -2px 2px rgba(0,0,0,0.4)'
+                                    }}>
+                                    <img src={roulette} alt="roulette wheel"
+                                        className="md:max-w-[500px] "
+                                    ></img>
+                                </div>
+                                <div className="text-2xl min-w-[205px] lg:mx-4">
                                     <p className="underline text-center">
                                         We offer :&nbsp;
                                     </p>
-                                    <ScrollingText words={['Blackjack', 'Poker', 'Roulette']}
-                                        // speed={200}
-                                        fontStyle={{
-                                            fontSize: '1.5rem',
-                                            textDecoration: 'underline'
-                                        }}
-                                        containerSize='2rem'
-                                    />
+                                    <p className="underline text-center">
+                                        Blackjack, Poker, and Roulette!
+                                    </p>
                                 </div>
                             </div>
-                            <p className="px-8 py-4 text-2xl">
-                                If you’d like to have Lady Luck by your side at your next event,
-                                feel free to contact us via phone, text, or email to get the party started.
-                            </p>
+                            <div id="lg_box_text"
+                                className="flex flex-col items-center">
+                                <p className="px-8 py-4 text-2xl text-center">
+                                    If you’d like to have Lady Luck by your side at your next event,
+                                    feel free to contact us via phone, text, or email to get the party started.
+                                </p>
+                                <C2Cbutton />
+                            </div>
                         </div>
                     </div>
-
-                    *prize packages are included for parties with 3 tables or more
-
-
-                    we also provide other party services - catering, DJs, etc.
+                    <p>
+                        * Prize packages are included for parties with 3 tables or more
+                    </p>
+                    <p>
+                        Ask us about our other party services - catering, DJ’s, etc.
+                    </p>
                 </div>
             </div>
         </div>

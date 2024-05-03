@@ -10,23 +10,24 @@ const About: React.FC = ({ }) => {
         <div>
             <Navbar />
             <div itemScope
-                itemType="http://schema.org/AboutPage">
+                itemType="http://schema.org/AboutPage"
+                className="px-8">
                 <div id="headerContainer"
-                    className="flex flex-col lg:mt-24 items-center"
+                    className="flex flex-col mt-24 items-center"
                 >
-                    <h1 className={`${goldText} text-center text-4xl`}>About</h1>
-                    <img src={logo} className="max-w-[466px]" />
+                    <h1 className={`${goldText} text-center text-4xl mb-4 font-bold`}>About</h1>
+                    <img src={logo} className="md:max-w-[466px]" />
                 </div>
                 <div id="text_container"
-                    className="bg-darkPurple mx-4 rounded">
-                    <p className="text-white text-2xl p-4"
+                    className="bg-darkPurple mx-4 rounded mt-4">
+                    <p className="text-white text-2xl py-4 px-8 text-center"
                     itemProp="description"
                     >
-                        Born and raised on Martha’s Vineyard, Matti began playing poker for fun with his family when he was just 10 years old. While living in California during his 20s, Matti began dealing games at private casino parties and events out west.
+                        Born and raised on Martha’s Vineyard, OUR OWNER Matti began playing poker for fun with his family when he was just 10 years old. While living in California during his 20s, Matti began dealing games at private casino parties and events out west.
                         <br></br>
                         Do you want a good job feels like just having a good time, it’s hard to give up.
                         <br></br>
-                        Upon returning to Martha’s Vineyard, Matti decided to “ let the good times roll”, and began Lady luck - MV casino co in 2023.
+                        Upon returning to Martha’s Vineyard, Matti decided to “ let the good times roll”, and began LADY LUCK - MV CASINO CO in 2023.
                         <br></br>
                         With a goal to add more fun, flash, and excitement to party is here on beautiful Martha’s Vineyard - Matti and his crew of fun-loving dealers at Lady Luck, are ready to make your event unforgettable.
                     </p>

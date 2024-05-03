@@ -36,7 +36,7 @@ const NavLinks: React.FC = ({ }) => {
                                 timing={(index + 1) * 200 }
                             />
                             <div className="lg:grid lg:place-items-end pl-2">
-                                <Link key={path} to={pathTo} className={`${goldText} font-roboto left-0 mb-0 `}>
+                                <Link key={path} to={pathTo} className={`${goldText} font-bold font-roboto left-0 mb-0 text-xl`}>
                                     {linkName.charAt(0).toLocaleUpperCase().concat(linkName.slice(1, linkName.length))}
                                 </Link>
                                 <div className={`${underlineAnimation} bottom-0`} ></div>
@@ -78,14 +78,15 @@ const MobileNavLinks: React.FC = ({ }) => {
                                 timing={(index + 1) * 200 }
                             />
                             <div className="lg:grid lg:place-items-end pl-2">
-                                <Link key={path} to={pathTo} className={`${goldText} font-roboto left-0 mb-0 `}>
+                                <Link key={path} to={pathTo} 
+                                className={`${goldText} font-bold font-roboto left-0 mb-0`} 
+                                >
                                     {linkName.charAt(0).toLocaleUpperCase().concat(linkName.slice(1, linkName.length))}
                                 </Link>
                                 <div className={`${underlineAnimation} bottom-0`} ></div>
                             </div>
                         </div>
                     )
-                    // }
                 })
             }
         </div>
