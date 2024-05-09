@@ -31,6 +31,7 @@ const Navbar: React.FC<NavProps> = ({ }) => {
         "@type": "LocalBusiness",
         "name": "Lady Luck - Martha's Vineyard Casino",
         "description": "Casino and gambling event and party services for Martha's Vineyard.",
+        "url": "https://ladyluckmv.com",
         "telephone" : "+1-508-560-5649",
         "email":"mvcasinoco@gmail.com",
         "areaServed": [
