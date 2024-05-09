@@ -2,7 +2,6 @@
 
 const Sun = () =>{
     return (
-        // -6 -6 212 212
         <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" height="220px" width="220px" version="1.1" id="Capa_1" viewBox="0 0 200 200" xmlSpace="preserve">
                     <g id='outer_sun'
                     className={`origin-center animate-reverseSpin`}
@@ -34,9 +33,7 @@ const Sun = () =>{
                               />
                         </g>
                     </g>
-                    <g id="mid_sun"
-                        // className={`origin-center animate-reverseSpin`}
-                    >
+                    <g id="mid_sun" >
                         <path fill="#FCDD66" d="
                         M8.258,102.427c-0.817,0-1.597-0.467-1.96-1.256c-0.497-1.081-0.024-2.361,1.058-2.858       
                         l41.802-19.215L31.544,31.544l47.553,17.615L98.312,7.356c0.497-1.08,1.776-1.556,2.858-1.058       

@@ -14,10 +14,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-/* 
-.flip {
-  animation: flip ${({ time }) => `${time}ms`} forwards ${({ time }) => `${time}ms`};
-} */
+
 
 @keyframes flip {
   from {

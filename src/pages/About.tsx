@@ -15,7 +15,7 @@ const About: React.FC = ({ }) => {
                 <div id="headerContainer"
                     className="flex flex-col mt-24 items-center"
                 >
-                    <h1 className={`${goldText} text-center text-4xl mb-4 font-bold`}>About</h1>
+                    <h1 className={`${goldText} text-center text-4xl mb-4 font-bold `}>About</h1>
                     <img src={logo} className="md:max-w-[466px]" />
                 </div>
                 <div id="text_container"
@@ -33,7 +33,7 @@ const About: React.FC = ({ }) => {
                     </p>
                 </div>
 
-                <div className={`${goldText} text-2xl text-center mt-4`}>
+                <div className={`${goldText} text-2xl text-center mt-4 font-bold`}>
                     May Lady Luck smile on all of us!
                     {/* ☀️ */}
                 </div>

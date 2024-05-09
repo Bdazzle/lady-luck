@@ -17,6 +17,7 @@ const FlipCard: React.FC<CardProps> = ({ front, back, width, height, timing }) =
         }
     },[])
 
+    console.log(time)
     return (
         <div id="flipcontainer"
         className={`[perspective-1000]`}
@@ -27,6 +28,7 @@ const FlipCard: React.FC<CardProps> = ({ front, back, width, height, timing }) =
         >
             <div className={`flipcard-inner w-full h-full relative transform-style-3d lg:transform lg:group-hover:rotate-y-180 lg:duration-500 `}
             style={  {
+                // animation : window.innerWidth <= 768 ? `flip ${time}ms forwards ${time}ms` : 'none',
                 animation : window.innerWidth <= 768 ? `flip ${time}ms forwards ${time}ms` : 'none',
             }}
             >

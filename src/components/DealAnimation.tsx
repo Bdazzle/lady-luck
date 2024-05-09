@@ -24,8 +24,8 @@ const Hand :React.FC = () =>{
                             </defs>
                             <rect width="239" height="335" x="-119.5" y="-167.5" rx="12" ry="12" fill="white" stroke="black" />
                             <text y={'-10%'} width={'50%'} textAnchor="middle">
-                                <tspan className={`text-[60px] font-bold font-cursive`} fill="url(#goldGradient)">Coming</tspan>
-                                <tspan className="text-[60px] font-bold font-cursive" fill="url(#goldGradient)" dy={'20%'} dx={'-70%'}>Soon</tspan>
+                                <tspan className={`text-[60px] font-bold font-crimson-text`} fill="url(#goldGradient)">Coming</tspan>
+                                <tspan className="text-[60px] font-bold font-crimson-text" fill="url(#goldGradient)" dy={'20%'} dx={'-70%'}>Soon</tspan>
                             </text>
                         </svg>
                     </div>

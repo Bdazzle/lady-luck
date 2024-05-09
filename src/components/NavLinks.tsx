@@ -43,7 +43,6 @@ const NavLinks: React.FC = ({ }) => {
                             </div>
                         </div>
                     )
-                    // }
                 })
             }
         </div>
@@ -54,7 +53,7 @@ const MobileNavLinks: React.FC = ({ }) => {
     const currentRoute = useLocation()
    
     return (
-        <div id="linksContainer"
+        <div id="mobile_linksContainer"
             className="flex z-10 flex-col absolute ml-0 w-1/3 bg-darkPurple py-2 rounded animate-leftSlide"
         >
             {

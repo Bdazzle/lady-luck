@@ -1,5 +1,3 @@
-import { transform } from 'typescript';
-
 /** @type {import('tailwindcss').Config} */
 const plugin = require('tailwindcss/plugin')
 const backfaceVisibility = plugin(function({addUtilities}) {
@@ -29,7 +27,6 @@ export default {
       colors: {
         "primaryPurple": "#7f06c4",
         "midpurple": "#420466",
-        // "darkPurple": "#27013d"
         "darkPurple": "#1a0029"
       },
       backgroundImage: {
@@ -37,7 +34,8 @@ export default {
       },
       fontFamily: {
         "roboto": "Roboto",
-        "cursive": ["'Kaushan Script', cursive"]
+        "cursive": ["'Kaushan Script', cursive"],
+        "crimson-text" : "Crimson Text"
       },
       animation: {
         'scrollX': 'textscrollX 8s linear infinite',

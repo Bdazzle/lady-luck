@@ -4,21 +4,18 @@ import logo from "../assets/logo-inverted-mid.png"
 import { FacebookShareButton } from "react-share"
 import TWBurgerButton from "./TWBurgerButton"
 import { NavLinks, MobileNavLinks } from "./NavLinks"
+import JSONLD from "./JSONLD"
 
 interface NavProps {
     translateY?: number
 }
 
 const Navbar: React.FC<NavProps> = ({ }) => {
-    // const currentRoute = useLocation()
     const logoRef = useRef<HTMLHeadingElement>(null)
-    // const [windowSize, breakpoint] = useWindowSize()
     const [isClicked, setIsClicked] = useState<boolean>(false)
-    // const [windowSize, setWindowSize] = useState<number>(window.innerWidth)
 
     useEffect(() => {
         const resize = () => {
-            // setWindowSize(window.innerWidth)
             if (window.innerWidth > 768) {
                 setIsClicked(false)
             }
@@ -29,9 +26,85 @@ const Navbar: React.FC<NavProps> = ({ }) => {
         }
     }, [])
 
+    const JSONLDdata = {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Lady Luck - Martha's Vineyard Casino",
+        "description": "Casino and gambling event and party services for Martha's Vineyard.",
+        "telephone" : "+1-508-560-5649",
+        "email":"mvcasinoco@gmail.com",
+        "areaServed": [
+            {
+                "@type": "GeoCircle",
+                "geoMidpoint": {
+                    "@type": "GeoCoordinates",
+                    "latitude": "41.24",
+                    "longitude": "70.37"
+                },
+                "geoRadius": "10 mi"
+            },
+            {
+                "@type": "Place",
+                "name": "West Tisbury, Martha's Vineyard, Massachusetts",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "West Tisbury",
+                    "addressRegion": "MA",
+                    "addressCountry": "US",
+                    "postalCode": "02575"
+                }
+            },
+            {
+                "@type": "Place",
+                "name": "Tisbury (Vineyard Haven), Martha's Vineyard, Massachusetts",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Vineyard Haven",
+                    "addressRegion": "MA",
+                    "addressCountry": "US",
+                    "postalCode": "02568"
+                }
+            },
+            {
+                "@type": "Place",
+                "name": "Oak Bluffs, Martha's Vineyard, Massachusetts",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Oak Bluffs",
+                    "addressRegion": "MA",
+                    "addressCountry": "US",
+                    "postalCode": "02557"
+                }
+            },
+            {
+                "@type": "Place",
+                "name": "Edgartown, Martha's Vineyard, Massachusetts",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Edgartown",
+                    "addressRegion": "MA",
+                    "addressCountry": "US",
+                    "postalCode": "02539"
+                }
+            },
+            {
+                "@type": "Place",
+                "name": "Aquinnah & Chilmark, Martha's Vineyard, Massachusetts",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Aquinnah & Chilmark",
+                    "addressRegion": "MA",
+                    "addressCountry": "US",
+                    "postalCode": "02535"
+                }
+            }
+        ]
+    }
+
     return (
         <div itemScope itemType="http://schema.org/LocalBusiness"
         >
+            <JSONLD data={JSONLDdata} />
             <nav id="nav" role="navigation" aria-label="Primary"
                 className="fixed lg:h-24 w-full flex flex-col lg:justify-center lg:items-center lg:flex-row mt-0 bg-black z-10"
             >
@@ -41,10 +114,11 @@ const Navbar: React.FC<NavProps> = ({ }) => {
                     <img src={logo}
                         className="h-12 md:h-20"
                         itemProp="logo"
+                        alt="Ladu Luck company logo"
                     />
                     <h1 ref={logoRef} itemProp="name"
                         id="navlogo"
-                        className={`${goldText} font-bold font-cursive text-4xl text-center lg:text-6xl w-[50%]`} >
+                        className={`${goldText} font-bold font-crimson-text text-4xl text-center lg:text-6xl w-[50%]`} >
                         Lady Luck
                     </h1>
                     <div id="socials"
@@ -59,7 +133,6 @@ const Navbar: React.FC<NavProps> = ({ }) => {
                             </svg>
                         }
                             url={""} />
-                        {/* <TwitterShareButton url="" children={<XIcon size={40} />} /> */}
                         <a id='ig' href="" target="_blank"
                             className="w-[40px] h-[40px]"
                         >
@@ -88,7 +161,7 @@ const Navbar: React.FC<NavProps> = ({ }) => {
                             </svg>
                         </a>
                         <a id="tiktok" href="" target="_blank"
-                        className="w-[40px] h-[40px]">
+                            className="w-[40px] h-[40px]">
                             <svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 250 250">
                                 <g clip-rule="evenodd" fill-rule="evenodd">
                                     <path d="M25 0h200c13.808 0 25 11.192 25 25v200c0 13.808-11.192 25-25 25H25c-13.808 0-25-11.192-25-25V25C0 11.192 11.192 0 25 0z" fill="#010101" />

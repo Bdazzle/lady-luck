@@ -1,0 +1,17 @@
+{
+    "@context": "http://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Lady Luck - Martha's Vineyard Casino",
+    "description": "Casino and gambling event or party services for Martha's Vineyard.",
+    "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": 41.24,
+            "longitude": 70.37
+        },
+        "geoRadius": "10 mi"
+    },
+    "telephone": "508-560-5649",
+    "email":"mvcasinoco@gmail.com"
+}

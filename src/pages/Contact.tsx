@@ -18,12 +18,11 @@ const Contact: React.FC = ({ }) => {
                 </p>
                 <div className="flex justify-center items-center bg-primaryPurple rounded-full w-[190px] my-2 border-2 border-[#BF953F]">
                     <a href="tel:5085605649" itemProp="telephone"
-                    // text-blue-600
                         className={`${goldText} font-bold text-center my-2 text-2xl border-b-2 border-[#BF953F]`}
                     >508-560-5649</a>
                 </div>
                 <div className="flex justify-center items-center bg-primaryPurple rounded-full w-[300px] my-2 border-2 border-[#BF953F]">
-                    <a href="mailto:soikkeli@vineyard.net?Subject=" target="_blank" rel="noreferrer" itemProp="email"
+                    <a href="mailto:mvcasinoco@gmail.com?Subject=" target="_blank" rel="noreferrer" itemProp="email"
                         className={`${goldText} font-bold text-center mb-2 text-2xl border-b-2 border-[#BF953F]`}>
                         mvcasinoco@gmail.com
                     </a>
