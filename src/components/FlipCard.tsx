@@ -17,7 +17,6 @@ const FlipCard: React.FC<CardProps> = ({ front, back, width, height, timing }) =
         }
     },[])
 
-    console.log(time)
     return (
         <div id="flipcontainer"
         className={`[perspective-1000]`}
