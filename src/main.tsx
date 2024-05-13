@@ -40,7 +40,7 @@ const router = createBrowserRouter([
     element: <Merch />
   }
 ], {
-  // basename: import.meta.env.DEV ? '/' : '/lady-luck/'
+  basename: import.meta.env.DEV ? '/' : '/lady-luck/'
 })
 // basename : '/'
 
