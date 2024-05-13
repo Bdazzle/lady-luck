@@ -52,6 +52,7 @@ export default {
         'dealMid' : 'dealMid 300ms ease-in-out forwards',
         'deal4' : 'deal4 400ms ease-in-out forwards',
         'deal5' : 'deal5 500ms ease-in-out forwards',
+        'fadeInandOut' : 'fadeInandOut 5000ms ease-in-out infinite'
       },
       keyframes: {
         /*
@@ -70,6 +71,11 @@ export default {
         fadeSlide: {
           '0%': { opacity: '0', transform: 'translateX(110%)'},
           '100%': { opacity: '1',  transform: 'translateX(0px)'}
+        },
+        fadeInandOut :{
+          '0%' : { opacity : '0.25'},
+          '50%' : { opacity : '1'},
+          '100%' : { opacity : '0.25'},
         },
         leftSlide : {
           '0%': { opacity: '0', transform: 'translateX(-100%)'},

@@ -2,10 +2,18 @@ import React, { useEffect, useRef, useState } from "react"
 import Navbar from "../components/Navbar"
 import blackjack from '../assets/blackjack.jpg'
 import roulette from '../assets/roulette.jpg'
+import hand21 from '../assets/21-hand.jpg'
+import poker from '../assets/poker.jpg'
 import logo from "../assets/logo-only.png"
 import emailLogo from "../assets/logo-email.png"
 import phoneLogo from "../assets/logo-phone.png"
 import C2Cbutton from "../components/C2Cbutton"
+
+const imageData : {path: string, alt: string }[] = [
+    { path: roulette, alt: "roulette wheel" },
+    { path: hand21, alt: "Jack and Ace of spades on a poker table with a deck of cards fanned out." },
+    { path: poker, alt: "black and gold ace cards, poker chips, and dice" }
+]
 
 const Home: React.FC = ({ }) => {
     const [Ytranslate, setYtranslate] = useState<number>(0)
@@ -14,6 +22,27 @@ const Home: React.FC = ({ }) => {
     const topRef = useRef<HTMLDivElement>(null)
     const midRef = useRef<HTMLDivElement>(null);
     const [midVis, setMidVis] = useState<boolean>(false)
+    // const imageRef = useRef<HTMLImageElement>(null);
+    // const [imageIndex, setImageIndex] = useState<number>(0)
+
+    // useEffect(() =>{
+    //     const imageIntervalId = setInterval(() =>{
+    //         /*
+    //         use modulo (%) of index by imageData length 
+    //         to keep the resulting index within the bounds of imageData.length.
+    //         better than if statements because there's no risk of incrementing index too high
+    //         */
+    //         setImageIndex((prevIndex) => (prevIndex + 1) % imageData.length);
+    //     }, 5000);
+    //     return () => clearInterval(imageIntervalId)
+    // }, [imageData.length])
+
+    // useEffect(() =>{
+    //     if(imageRef.current){
+    //         imageRef.current.src = imageData[imageIndex].path;
+    //         imageRef.current.alt = imageData[imageIndex].alt
+    //     }
+    // },[imageIndex])
 
     const handleScroll = () => {
         const scrollTop = window.scrollY;
@@ -139,14 +168,25 @@ const Home: React.FC = ({ }) => {
                         <div className={`${midVis ? `animate-expand` : 'animate-compress'} lg:rounded lg:flex lg:flex-row-reverse md:group-hover:bg-primaryPurple md:bg-midpurple rounded md:pt-10 lg:pt-0 pt-5`}>
                             <div
                                 className={` hover:bg-primaryPurple group-hover:bg-primaryPurple bg-midpurple md:bg-none rounded lg:min-w-[711px] p-4 flex flex-col lg:flex-row items-center`}>
-                                <div className="md:max-w-[500px]"
+                                <div className="md:max-w-[500px] md:max-h-[333px]"
                                     style={{
                                         overflow: 'hidden',
                                         boxShadow: '2px 2px 2px rgba(0,0,0,0.4), -2px -2px 2px rgba(0,0,0,0.4)'
                                     }}>
-                                    <img src={roulette} alt="roulette wheel"
-                                        className="md:max-w-[500px] "
+                                    <img 
+                                    // ref={imageRef} 
+                                    src={roulette} alt="roulette wheel"
+                                        className="md:max-w-[500px]"
                                     ></img>
+                                    {/* {
+                                        imageData.map(image =>{
+                                            return (
+                                                <img src={image.path} alt={image.alt} 
+                                                className="md:max-w-[500px] md:max-h-[333px] absolute"
+                                                ></img>
+                                            )
+                                        })
+                                    } */}
                                 </div>
                                 <div className="text-2xl min-w-[205px] lg:mx-4">
                                     <p className="underline text-center">

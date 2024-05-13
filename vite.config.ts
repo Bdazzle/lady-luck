@@ -13,9 +13,9 @@ export default defineConfig(({ command }) => {
     base: '/',
   }
 
-  if (command !== 'serve') {
-    config.base = '/lady-luck/'
-  }
+  // if (command !== 'serve') {
+  //   config.base = '/lady-luck/'
+  // }
 
   return config
 })
