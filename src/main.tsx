@@ -41,8 +41,8 @@ const router = createBrowserRouter([
   }
 ], {
   // basename: import.meta.env.DEV ? '/' : '/lady-luck/'
-  basename : '/'
 })
+// basename : '/'
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
