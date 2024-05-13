@@ -2,18 +2,18 @@ import React, { useEffect, useRef, useState } from "react"
 import Navbar from "../components/Navbar"
 import blackjack from '../assets/blackjack.jpg'
 import roulette from '../assets/roulette.jpg'
-import hand21 from '../assets/21-hand.jpg'
-import poker from '../assets/poker.jpg'
+// import hand21 from '../assets/21-hand.jpg'
+// import poker from '../assets/poker.jpg'
 import logo from "../assets/logo-only.png"
 import emailLogo from "../assets/logo-email.png"
 import phoneLogo from "../assets/logo-phone.png"
 import C2Cbutton from "../components/C2Cbutton"
 
-const imageData : {path: string, alt: string }[] = [
-    { path: roulette, alt: "roulette wheel" },
-    { path: hand21, alt: "Jack and Ace of spades on a poker table with a deck of cards fanned out." },
-    { path: poker, alt: "black and gold ace cards, poker chips, and dice" }
-]
+// const imageData : {path: string, alt: string }[] = [
+//     { path: roulette, alt: "roulette wheel" },
+//     { path: hand21, alt: "Jack and Ace of spades on a poker table with a deck of cards fanned out." },
+//     { path: poker, alt: "black and gold ace cards, poker chips, and dice" }
+// ]
 
 const Home: React.FC = ({ }) => {
     const [Ytranslate, setYtranslate] = useState<number>(0)
