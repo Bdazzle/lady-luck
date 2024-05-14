@@ -5,6 +5,7 @@ import { FacebookShareButton } from "react-share"
 import TWBurgerButton from "./TWBurgerButton"
 import { NavLinks, MobileNavLinks } from "./NavLinks"
 import JSONLD from "./JSONLD"
+import { useLocation } from "react-router-dom"
 
 interface NavProps {
     translateY?: number
@@ -12,7 +13,12 @@ interface NavProps {
 
 const Navbar: React.FC<NavProps> = ({ }) => {
     const logoRef = useRef<HTMLHeadingElement>(null)
+    const location = useLocation()
     const [isClicked, setIsClicked] = useState<boolean>(false)
+
+    useEffect(() =>{
+        window.scrollTo(0,0)
+    },[location])
 
     useEffect(() => {
         const resize = () => {

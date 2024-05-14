@@ -40,16 +40,15 @@ const router = createBrowserRouter([
     element: <Merch />
   }
 ], {
-  // basename: import.meta.env.DEV ? '/' : '/lady-luck/'
   basename : ''
 })
-
+// basename: import.meta.env.DEV ? '/' : '/lady-luck/'
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    {/* <App /> */}
     <RouterProvider router={router} />
     <Footer />
   </React.StrictMode>,
 )
+{/* <App /> */}
