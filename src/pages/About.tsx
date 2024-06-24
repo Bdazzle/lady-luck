@@ -23,13 +23,13 @@ const About: React.FC = ({ }) => {
                     <p className="text-white text-2xl py-4 px-8 text-center"
                     itemProp="description"
                     >
-                        Born and raised on Martha’s Vineyard, OUR OWNER Matti began playing poker for fun with his family when he was just 10 years old. While living in California during his 20s, Matti began dealing games at private casino parties and events out west.
+                        Born and raised on Martha’s Vineyard, our owner Matti began playing poker for fun with his family when he was just 10 years old. While living in California during his 20s, Matti began dealing games at private casino parties and events out west.
                         <br></br>
-                        Do you want a good job feels like just having a good time, it’s hard to give up.
+                        And when a job feels like just having a good time, it’s hard to give up.
                         <br></br>
-                        Upon returning to Martha’s Vineyard, Matti decided to “ let the good times roll”, and began LADY LUCK - MV CASINO CO in 2023.
+                        Upon returning to Martha’s Vineyard, Matti decided to “ let the good times roll”, and began Lady Luck - MV Casino Co. in 2023.
                         <br></br>
-                        With a goal to add more fun, flash, and excitement to party is here on beautiful Martha’s Vineyard - Matti and his crew of fun-loving dealers at Lady Luck, are ready to make your event unforgettable.
+                        With a goal to add more flash, fun, and excitement to your party here on beautiful Martha’s Vineyard - Matti and his crew of fun-loving dealers at Lady Luck are ready to make your event unforgettable.
                     </p>
                 </div>
 

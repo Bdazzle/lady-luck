@@ -13,8 +13,8 @@ interface NavProps {
 
 const Navbar: React.FC<NavProps> = ({ }) => {
     const logoRef = useRef<HTMLHeadingElement>(null)
-    const location = useLocation()
     const [isClicked, setIsClicked] = useState<boolean>(false)
+    const location = useLocation()
 
     useEffect(() =>{
         window.scrollTo(0,0)
@@ -139,8 +139,8 @@ const Navbar: React.FC<NavProps> = ({ }) => {
                                 </path>
                             </svg>
                         }
-                            url={""} />
-                        <a id='ig' href="" target="_blank"
+                            url={"https://www.facebook.com/ladyluckmv"} />
+                        <a id='ig' href="https://www.instagram.com/ladyluckmv" target="_blank"
                             className="w-[40px] h-[40px]"
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" height="40" width="40" viewBox="-19.5036 -32.49725 169.0312 194.9835">

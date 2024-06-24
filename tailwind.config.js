@@ -73,6 +73,8 @@ export default {
           '100%': { opacity: '1',  transform: 'translateX(0px)'}
         },
         fadeInandOut :{
+          // '0%' : { opacity : '1'},
+          // '100%' : { opacity : '0.25'},
           '0%' : { opacity : '0.25'},
           '50%' : { opacity : '1'},
           '100%' : { opacity : '0.25'},
