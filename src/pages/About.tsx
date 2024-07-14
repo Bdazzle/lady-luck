@@ -1,6 +1,6 @@
 import React from "react"
 import Navbar from "../components/Navbar"
-import logo from "../assets/logo-inverted-mid.png"
+// import logo from "../assets/logo-inverted-mid.png"
 import { goldText } from "../constants"
 import Sun from "../SVGs/Sun"
 
@@ -16,12 +16,30 @@ const About: React.FC = ({ }) => {
                     className="flex flex-col mt-24 items-center"
                 >
                     <h1 className={`${goldText} text-center text-4xl mb-4 font-bold `}>About</h1>
-                    <img src={logo} className="md:max-w-[466px]" />
+                    {/* <img src={logo} className="md:max-w-[466px]" /> */}
+                    <div className="bg-darkPurple mx-4 rounded mt-4">
+                        <p className="text-white text-2xl py-4 px-8 text-center">
+                            How our parties work:
+                            <br></br>
+                            Lady Luck brings a fun, exciting, and authentic casino party to you!
+                            <br></br>
+                            We supply the tables, chips, cards and EXCLUSIVE prize packages to play for, with prizes from various Vineyard business valued at over $300!
+                            <br></br>
+                            Blackjack, roulette, and poker are offered with professional tables and dealers.
+                            <br></br>
+                            You play with "funny money" - each guest starts at 500 in chips and plays as much as they like. At then end of the event, each guest can trade their chips on for raffle tickets.
+                            <br></br>
+                            We then raffle off 1st and 2nd place MV-themed packages with prizes, certificates, and discounts EXCLUSIVE to Lady Luck and our party guests.
+                        </p>
+                        <p className="text-white text-xl py-4 px-8 text-center">
+                            * prize packages are included free for parties of 3 tables or more.
+                        </p>
+                    </div>
                 </div>
                 <div id="text_container"
                     className="bg-darkPurple mx-4 rounded mt-4">
                     <p className="text-white text-2xl py-4 px-8 text-center"
-                    itemProp="description"
+                        itemProp="description"
                     >
                         Born and raised on Martha’s Vineyard, our owner Matti began playing poker for fun with his family when he was just 10 years old. While living in California during his 20s, Matti began dealing games at private casino parties and events out west.
                         <br></br>
