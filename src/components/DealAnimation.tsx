@@ -11,7 +11,7 @@ const Hand :React.FC = () =>{
                     <div id="card2" className={`max-w-[80px] max-h-[112px] md:max-w-[142px] md:max-h-[200px] origin-center absolute animate-deal2 `}>
                         {cardFaces('soon').cardback}
                     </div>
-                    <div id="card3" className={` max-w-[80px] max-h-[112px] md:max-w-[142px] md:max-h-[200px] origin-center absolute animate-dealMid `}>
+                    <div id="card3" className={` max-w-[80px] max-h-[112px] md:max-w-[142px] md:max-h-[200px] origin-center absolute animate-deal3 `}>
                         <svg xmlns="http://www.w3.org/2000/svg" className="card" width="100%" height="100%" preserveAspectRatio="none" viewBox="-120 -168 240 336" >
                             <defs>
                                 <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">

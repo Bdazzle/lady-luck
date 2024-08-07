@@ -24,6 +24,11 @@ export default {
   ],
   theme: {
     extend: {
+      gridTemplateRows:{
+        // 'gallery':'100px minmax(100px, 1fr) 100px'
+        // 'gallery' : 'repeat(4, 125px) repeat(4, 125px) repeat(4, 125px) '
+        'gallery' : 'repeat(17, 125px)'
+      },
       colors: {
         "primaryPurple": "#7f06c4",
         "midpurple": "#420466",
@@ -39,7 +44,7 @@ export default {
       },
       animation: {
         'scrollX': 'textscrollX 8s linear infinite',
-        'fadeSlide': 'fadeSlide 500ms ease-in-out',
+        // 'fadeSlide': 'fadeSlide 500ms ease-in-out',
         'leftSlide': 'leftSlide 500ms ease-in-out',
         /*forwards maintains animation state at end of animation */
         'expand' : 'expand 500ms ease-in-out forwards',
@@ -49,10 +54,11 @@ export default {
         'reverseSpin' : 'reverseSpin 6s linear infinite',
         'deal1' : 'deal1 100ms ease-in-out forwards',
         'deal2' : 'deal2 200ms ease-in-out forwards',
-        'dealMid' : 'dealMid 300ms ease-in-out forwards',
+        'deal3' : 'deal3 300ms ease-in-out forwards',
         'deal4' : 'deal4 400ms ease-in-out forwards',
         'deal5' : 'deal5 500ms ease-in-out forwards',
-        'fadeInandOut' : 'fadeInandOut 5000ms ease-in-out infinite'
+        'fadeInandOut' : 'fadeInandOut 5000ms ease-in-out infinite',
+        'fadeIn' : 'fadeIn'
       },
       keyframes: {
         /*
@@ -68,13 +74,15 @@ export default {
           '50%, 62.66%': { transform: 'translate3d(0,-66%,0)' },
           '75%, 87.66%': { transform: 'translate3d(0,-33%,0)' }
         },
-        fadeSlide: {
-          '0%': { opacity: '0', transform: 'translateX(110%)'},
-          '100%': { opacity: '1',  transform: 'translateX(0px)'}
+        // fadeSlide: {
+        //   '0%': { opacity: '0', transform: 'translateX(110%)'},
+        //   '100%': { opacity: '1',  transform: 'translateX(0px)'}
+        // },
+        fadeIn:{
+          '0%' :{ opacity: '0' },
+          '100%': { opacity: '1'}
         },
         fadeInandOut :{
-          // '0%' : { opacity : '1'},
-          // '100%' : { opacity : '0.25'},
           '0%' : { opacity : '0.25'},
           '50%' : { opacity : '1'},
           '100%' : { opacity : '0.25'},
@@ -118,7 +126,7 @@ export default {
           '0%': { transform : 'translate3d(0,0)' },
           '100%' : { transform : 'translate3d(-100%,-100%,0) rotate(-23deg)'}
         },
-        dealMid : {
+        deal3 : {
           '0%': { transform : 'translateY(0)' },
           '100%' : { transform : 'translateY(-130%)'}
         },
