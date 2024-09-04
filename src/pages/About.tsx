@@ -1,6 +1,5 @@
 import React from "react"
 import Navbar from "../components/Navbar"
-// import logo from "../assets/logo-inverted-mid.png"
 import { goldText } from "../constants"
 import Sun from "../SVGs/Sun"
 
@@ -16,7 +15,6 @@ const About: React.FC = ({ }) => {
                     className="flex flex-col mt-24 items-center"
                 >
                     <h1 className={`${goldText} text-center text-4xl mb-4 font-bold `}>About</h1>
-                    {/* <img src={logo} className="md:max-w-[466px]" /> */}
                     <div className="bg-darkPurple mx-4 rounded mt-4">
                         <p className="text-white text-2xl py-4 px-8 text-center">
                             How our parties work:
@@ -53,7 +51,6 @@ const About: React.FC = ({ }) => {
 
                 <div className={`${goldText} text-2xl text-center mt-4 font-bold`}>
                     May Lady Luck smile on all of us!
-                    {/* ☀️ */}
                 </div>
                 <div id="sun_container" className="flex justify-center h-[250px] min-w-52">
                     <Sun />

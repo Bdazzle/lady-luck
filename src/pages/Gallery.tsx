@@ -38,7 +38,7 @@ const rouletteImageData: { path: string, alt: string }[] = [
 /*
 if index = 0 (first image), no margins.
 if last image, set to container width - image width + padding(negative number)
-for whatever reason, all indented margin instances are containerwidth-images.length-index-2. This will also calculate middle images.
+for whatever reason, all indented margin instances are containerwidth-images.length-index-2, maybe -2 because 1st and last images don't have margin calcs?
 some images have different width and padding requirements because they were taken off different devices?
 */
 const calcMargin = (containerWidth: number, imageWidth: number, index: number, imageDataLength: number, padding: number) => {

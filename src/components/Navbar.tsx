@@ -7,6 +7,82 @@ import { NavLinks, MobileNavLinks } from "./NavLinks"
 import JSONLD from "./JSONLD"
 import { useLocation } from "react-router-dom"
 
+const JSONLDdata = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Lady Luck - Martha's Vineyard Casino",
+    "description": "Casino and gambling event and party services for Martha's Vineyard.",
+    "url": "https://ladyluckmv.com",
+    "image":"/assets/logo-inverted-mid-DcUH6mw9.png",
+    "telephone" : "+1-508-560-5649",
+    "email":"mvcasinoco@gmail.com",
+    "areaServed": [
+        {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": "41.24",
+                "longitude": "70.37"
+            },
+            "geoRadius": "10 mi"
+        },
+        {
+            "@type": "Place",
+            "name": "West Tisbury, Martha's Vineyard, Massachusetts",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "West Tisbury",
+                "addressRegion": "MA",
+                "addressCountry": "US",
+                "postalCode": "02575"
+            }
+        },
+        {
+            "@type": "Place",
+            "name": "Tisbury (Vineyard Haven), Martha's Vineyard, Massachusetts",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Vineyard Haven",
+                "addressRegion": "MA",
+                "addressCountry": "US",
+                "postalCode": "02568"
+            }
+        },
+        {
+            "@type": "Place",
+            "name": "Oak Bluffs, Martha's Vineyard, Massachusetts",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Oak Bluffs",
+                "addressRegion": "MA",
+                "addressCountry": "US",
+                "postalCode": "02557"
+            }
+        },
+        {
+            "@type": "Place",
+            "name": "Edgartown, Martha's Vineyard, Massachusetts",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Edgartown",
+                "addressRegion": "MA",
+                "addressCountry": "US",
+                "postalCode": "02539"
+            }
+        },
+        {
+            "@type": "Place",
+            "name": "Aquinnah & Chilmark, Martha's Vineyard, Massachusetts",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Aquinnah & Chilmark",
+                "addressRegion": "MA",
+                "addressCountry": "US",
+                "postalCode": "02535"
+            }
+        }
+    ]
+}
 interface NavProps {
     translateY?: number
 }
@@ -31,82 +107,6 @@ const Navbar: React.FC<NavProps> = ({ }) => {
             window.removeEventListener("resize", resize)
         }
     }, [])
-
-    const JSONLDdata = {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Lady Luck - Martha's Vineyard Casino",
-        "description": "Casino and gambling event and party services for Martha's Vineyard.",
-        "url": "https://ladyluckmv.com",
-        "telephone" : "+1-508-560-5649",
-        "email":"mvcasinoco@gmail.com",
-        "areaServed": [
-            {
-                "@type": "GeoCircle",
-                "geoMidpoint": {
-                    "@type": "GeoCoordinates",
-                    "latitude": "41.24",
-                    "longitude": "70.37"
-                },
-                "geoRadius": "10 mi"
-            },
-            {
-                "@type": "Place",
-                "name": "West Tisbury, Martha's Vineyard, Massachusetts",
-                "address": {
-                    "@type": "PostalAddress",
-                    "addressLocality": "West Tisbury",
-                    "addressRegion": "MA",
-                    "addressCountry": "US",
-                    "postalCode": "02575"
-                }
-            },
-            {
-                "@type": "Place",
-                "name": "Tisbury (Vineyard Haven), Martha's Vineyard, Massachusetts",
-                "address": {
-                    "@type": "PostalAddress",
-                    "addressLocality": "Vineyard Haven",
-                    "addressRegion": "MA",
-                    "addressCountry": "US",
-                    "postalCode": "02568"
-                }
-            },
-            {
-                "@type": "Place",
-                "name": "Oak Bluffs, Martha's Vineyard, Massachusetts",
-                "address": {
-                    "@type": "PostalAddress",
-                    "addressLocality": "Oak Bluffs",
-                    "addressRegion": "MA",
-                    "addressCountry": "US",
-                    "postalCode": "02557"
-                }
-            },
-            {
-                "@type": "Place",
-                "name": "Edgartown, Martha's Vineyard, Massachusetts",
-                "address": {
-                    "@type": "PostalAddress",
-                    "addressLocality": "Edgartown",
-                    "addressRegion": "MA",
-                    "addressCountry": "US",
-                    "postalCode": "02539"
-                }
-            },
-            {
-                "@type": "Place",
-                "name": "Aquinnah & Chilmark, Martha's Vineyard, Massachusetts",
-                "address": {
-                    "@type": "PostalAddress",
-                    "addressLocality": "Aquinnah & Chilmark",
-                    "addressRegion": "MA",
-                    "addressCountry": "US",
-                    "postalCode": "02535"
-                }
-            }
-        ]
-    }
 
     return (
         <div itemScope itemType="http://schema.org/LocalBusiness"

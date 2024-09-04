@@ -6,7 +6,8 @@ import C2Cbutton from "../components/C2Cbutton"
 const Contact: React.FC = ({ }) => {
 
     return (
-        <div>
+        <div itemScope
+            itemType="http://schema.org/ContactPage">
             <Navbar />
             <h1 className={`${goldText} text-center text-4xl my-4 mt-24 font-bold`}>
                 Contact

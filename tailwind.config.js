@@ -25,8 +25,6 @@ export default {
   theme: {
     extend: {
       gridTemplateRows:{
-        // 'gallery':'100px minmax(100px, 1fr) 100px'
-        // 'gallery' : 'repeat(4, 125px) repeat(4, 125px) repeat(4, 125px) '
         'gallery' : 'repeat(17, 125px)'
       },
       colors: {
@@ -44,7 +42,6 @@ export default {
       },
       animation: {
         'scrollX': 'textscrollX 8s linear infinite',
-        // 'fadeSlide': 'fadeSlide 500ms ease-in-out',
         'leftSlide': 'leftSlide 500ms ease-in-out',
         /*forwards maintains animation state at end of animation */
         'expand' : 'expand 500ms ease-in-out forwards',
@@ -74,10 +71,6 @@ export default {
           '50%, 62.66%': { transform: 'translate3d(0,-66%,0)' },
           '75%, 87.66%': { transform: 'translate3d(0,-33%,0)' }
         },
-        // fadeSlide: {
-        //   '0%': { opacity: '0', transform: 'translateX(110%)'},
-        //   '100%': { opacity: '1',  transform: 'translateX(0px)'}
-        // },
         fadeIn:{
           '0%' :{ opacity: '0' },
           '100%': { opacity: '1'}

@@ -11,7 +11,6 @@ const Footer: React.FC = () => {
             {
                 "@type" : "ContactPoint",
                 "telephone": "+1-508-560-5649",
-
                 "email": "mailto:mvcasinoco@gmail.com"
             }
         ]
