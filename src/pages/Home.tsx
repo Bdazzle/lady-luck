@@ -129,7 +129,7 @@ const Home: React.FC = ({ }) => {
                             <img className="py-2" src={emailLogo}></img>
                         </a>
                         <a className="md:max-w-[466px] border-b border-blue-600"
-                            href="tel:5085605649" itemProp="telephone">
+                            href="tel:3104843513" itemProp="telephone">
                             <img className="py-2" src={phoneLogo}></img>
                         </a>
                     </div>

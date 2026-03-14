@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
         "contactPoint" : [
             {
                 "@type" : "ContactPoint",
-                "telephone": "+1-508-560-5649",
+                "telephone": "+1-310-484-3513",
                 "email": "mailto:mvcasinoco@gmail.com"
             }
         ]
@@ -27,9 +27,9 @@ const Footer: React.FC = () => {
             <div id="contact_footer"
                 className="flex flex-col lg:flex-row justify-around items-center lg:w-[50%]"
             >
-                <a href="tel:5085605649" itemProp="telephone"
+                <a href="tel:3104843513" itemProp="telephone"
                     className={`underline text-blue-600 text-3xl`}
-                >508-560-5649</a>
+                >310-484-3513</a>
                 <div>
                     <a href="mailto:mvcasinoco@gmail.com?Subject=" target="_blank" rel="noreferrer" itemProp="email"
                     className={`underline text-blue-600 text-3xl`}>

@@ -14,7 +14,7 @@ const JSONLDdata = {
     "description": "Casino and gambling event and party services for Martha's Vineyard.",
     "url": "https://ladyluckmv.com",
     "image":"/assets/logo-inverted-mid-DcUH6mw9.png",
-    "telephone" : "+1-508-560-5649",
+    "telephone" : "+1-310-484-3513",
     "email":"mvcasinoco@gmail.com",
     "areaServed": [
         {
